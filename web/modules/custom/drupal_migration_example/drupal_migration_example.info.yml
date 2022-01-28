@@ -1,0 +1,14 @@
+name: 'drupal migration example'
+description: Module for performing site-specific migrations.
+type: module
+core_version_requirement: ^9.1
+package: Custom
+
+# Dependencies
+dependencies:
+  - migrate
+  - migrate_source_csv
+  - migrate_plus
+  - migrate_tools
+  - node
+  - taxonomy
