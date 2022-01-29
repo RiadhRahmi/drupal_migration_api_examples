@@ -22,8 +22,8 @@ source:
   ids: [Title]  
 
   # Source field definitions.
-  fields:
-    Title: The tag.
+#  fields:
+#    Title: The tag.
 # Destination.
 destination:
   plugin: 'entity:taxonomy_term'

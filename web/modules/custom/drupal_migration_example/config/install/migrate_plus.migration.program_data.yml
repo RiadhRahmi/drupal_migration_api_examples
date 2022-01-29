@@ -53,16 +53,16 @@ source:
   # explanatory. It is a set of key-value pairs where the key
   # is the property name and the value is a string describing what
   # the property is all about.
-  fields:
-    ID: Unique identifier for the program as in the data source.
-    Title: Name of the program.
-    Body: A description for the program.
-    Level: Whether the program is for undergraduates or graduates.
-    Type: Whether it is a full-time or a part-time program.
-    Image file: Name of the image file associated with the program.
-    Image alt: Alternate text for the image for accessibilty.
-    Tags: Comma-separated strings to use as tags.
-    Fees: We will ignore this field as per requirement.
+#  fields:
+#    ID: Unique identifier for the program as in the data source.
+#    Title: Name of the program.
+#    Body: A description for the program.
+#    Level: Whether the program is for undergraduates or graduates.
+#    Type: Whether it is a full-time or a part-time program.
+#    Image file: Name of the image file associated with the program.
+#    Image alt: Alternate text for the image for accessibilty.
+#    Tags: Comma-separated strings to use as tags.
+#    Fees: We will ignore this field as per requirement.
   # Static values for the migration.
   #
   # We can assign hard-coded values to certain properties using constants.
@@ -227,7 +227,7 @@ process:
     # "process" plugin to explode the terms and translate the term names into
     # their corresponding term IDs.
     -
-      plugin: migration
+      plugin: migration_lookup
       migration: program_tags
   # For the "Image" of the program, we need to do some real work.
   # First, we need to define the "program_image" migration to generate
@@ -240,7 +240,7 @@ process:
   # associates the files as entity references, thereby standardizing
   # things to a great extent.
   'field_image/target_id':
-    plugin: migration
+    plugin: migration_lookup
     migration: program_image
     source: Image file
   # Now that we have the images in place, we also copy the alternate text

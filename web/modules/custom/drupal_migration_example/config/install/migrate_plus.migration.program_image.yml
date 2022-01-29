@@ -22,8 +22,8 @@ source:
   # image results in the creation of a unique file entity on the site.
   ids: [Image file]    
   # Source field definitions.
-  fields:
-    Image file: Name of the image file associated with the program.
+#  fields:
+#    Image file: Name of the image file associated with the program.
   # Since we are writing YAML, we do not have ways to manipulate
   # fields like we do in PHP. However, we can use migration process
   # plugins. These plugins can use migration-specific "constants"
