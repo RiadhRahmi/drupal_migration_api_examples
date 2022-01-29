@@ -1,8 +1,6 @@
-# drupal_9_tuto
-
-drupal migration API examples
-migrate users
-migrate users with many roles
-migrate taxonomy
-migrate files
-migrate nodes
+# drupal migration API examples :<br>
+migrate users <br>
+migrate users with many roles <br>
+migrate taxonomy <br>
+migrate files <br>
+migrate nodes <br>
