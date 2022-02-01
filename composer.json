@@ -21,9 +21,13 @@
     "drupal/core-composer-scaffold": "^9.3",
     "drupal/core-project-message": "^9.3",
     "drupal/core-recommended": "^9.3",
+    "drupal/devel": "^4.1",
     "drupal/migrate_source_csv": "^3.4",
     "drupal/migrate_tools": "^5.1",
-    "drush/drush": "^11.0"
+    "drupal/redis": "^1.5",
+    "drupal/taxonomy_delete": "^1.1",
+    "drush/drush": "^11.0",
+    "predis/predis": "^1.1"
   },
   "conflict": {
     "drupal/drupal": "*"

@@ -648,7 +648,7 @@ $settings['update_free_access'] = FALSE;
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+//$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
 /**
  * Override the default service container class.
@@ -716,8 +716,8 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * @see \Drupal\Core\Extension\ExtensionDiscovery::scanDirectory()
  */
 $settings['file_scan_ignore_directories'] = [
-  'node_modules',
-  'bower_components',
+    'node_modules',
+    'bower_components',
 ];
 
 /**
@@ -769,14 +769,31 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'drupal_9_db',
-  'username' => 'drupal_9_db',
-  'password' => 'drupal_9_db',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
+$databases['default']['default'] = array(
+    'database' => 'drupal_9_db',
+    'username' => 'drupal_9_db',
+    'password' => 'drupal_9_db',
+    'prefix' => '',
+    'host' => 'localhost',
+    'port' => '3306',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_NueBkxwUn0Ma8LZASa_h4EDYMxURE12wpX54tKnEszI3kyCVvkhGEy_NnuSIkK7JYF1wKtaYaw/sync';
+
+
+$settings['redis.connection']['interface'] = 'Predis'; // Use predis library.
+$settings['redis.connection']['replication'] = TRUE; // Turns on replication.
+$settings['redis.connection']['replication.host'][1]['host'] = '127.0.0.1';  // Your Redis instance hostname.
+$settings['redis.connection']['replication.host'][1]['port'] = '6379'; // Only required if using non-standard port.
+$settings['redis.connection']['replication.host'][1]['role'] = 'primary'; // The redis instance role.
+$settings['redis.connection']['replication.host'][2]['host'] = '127.0.0.1';
+$settings['redis.connection']['replication.host'][2]['port'] = '6379';
+$settings['redis.connection']['replication.host'][2]['role'] = 'replica';
+$settings['redis.connection']['replication.host'][3]['host'] = '127.0.0.1';
+$settings['redis.connection']['replication.host'][3]['port'] = '6379';
+$settings['redis.connection']['replication.host'][3]['role'] = 'replica';
+$settings['cache']['default'] = 'cache.backend.redis';
+
+
+$settings['container_yamls'][] = 'modules/redis/example.services.yml';

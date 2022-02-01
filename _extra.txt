@@ -1,0 +1,3 @@
+// redis with drupal
+https://www.youtube.com/watch?v=YxVqZ-zEylY
+redis config =======> modules/redis/readme.md
