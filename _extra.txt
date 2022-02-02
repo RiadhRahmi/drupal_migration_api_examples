@@ -1,3 +1,7 @@
 // redis with drupal
 https://www.youtube.com/watch?v=YxVqZ-zEylY
 redis config =======> modules/redis/readme.md
+
+
+// algolia search with drupal
+https://www.youtube.com/watch?v=ysqrZ29FaeM
