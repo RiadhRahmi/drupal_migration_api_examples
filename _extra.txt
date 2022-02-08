@@ -1,3 +1,8 @@
 // redis with drupal
 https://www.youtube.com/watch?v=YxVqZ-zEylY
 redis config =======> modules/redis/readme.md
+
+// algolia search
+https://codesandbox.io/embed/github/algolia/doc-code-samples/tree/master/React+InstantSearch/getting-started
+https://github.com/algolia/react-instantsearch
+https://www.algolia.com/doc/guides/building-search-ui/ui-and-ux-patterns/facet-display/react/

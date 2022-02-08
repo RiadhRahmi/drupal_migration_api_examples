@@ -1,0 +1,5 @@
+name: Algolia React Search
+description: "Algolia React Search"
+type: module
+package: 'Custom'
+core_version_requirement: ^9.1

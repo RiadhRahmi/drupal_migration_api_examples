@@ -1,0 +1,6 @@
+react-basic:
+  js:
+    js/dist/index.js: { preprocess: false }
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css: { type: external }    
