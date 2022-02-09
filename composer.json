@@ -29,6 +29,7 @@
     "drupal/search_api": "^1.23",
     "drupal/taxonomy_delete": "^1.1",
     "drush/drush": "^11.0",
+    "makinacorpus/php-lucene": "^1.0",
     "predis/predis": "^1.1"
   },
   "conflict": {
